@@ -17,4 +17,9 @@ class Provinsi extends Model
         'latitude',
         'longitude'
     ];
+
+    public function kabupatenKotas()
+    {
+        return $this->hasMany(KabupatenKota::class);
+    }
 }
