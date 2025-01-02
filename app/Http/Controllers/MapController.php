@@ -16,4 +16,14 @@ class MapController extends Controller
             'provinsi' => $provinsiData
         ]);
     }
+
+    public function gempa()
+    {
+        $apiGempa = 'https://data.bmkg.go.id/DataMKG/TEWS/gempaterkini.json';
+
+        return view('map.gempa', [
+            'title' => 'Gempa',
+            'gempa' => $apiGempa
+        ]);
+    }
 }
